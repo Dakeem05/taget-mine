@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start: #11101d;
+  --background-end: #797886;
+  --brand-color: #0d0d0d;
+}
+
+body {
+  color: var(--brand-color);
+  background-color: white;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-black px-6 py-3 rounded-md border border-black hover:bg-gray-100 transition-colors;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(to bottom, var(--background-start), var(--background-end));
+  }
+}
