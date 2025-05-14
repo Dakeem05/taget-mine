@@ -49,7 +49,7 @@ export default function Partners() {
                 alt={partner.name}
                 width={120}
                 height={50}
-                className="h-8 sm:h-12 w-auto object-contain"
+                className="h-8 scale-[2] w-auto sm:h-10 md:h-11 lg:h-12 object-contain" // Modified this line
               />
             </motion.div>
           ))}
