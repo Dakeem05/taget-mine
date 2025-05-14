@@ -33,4 +33,151 @@ body {
   .gradient-bg {
     background: linear-gradient(to bottom, var(--background-start), var(--background-end));
   }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-in-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-in-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.5s ease-in-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.5s ease-in-out forwards;
+  }
+
+  .animate-scale {
+    animation: scale 0.5s ease-in-out forwards;
+  }
+
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Prose styles for rich text content */
+.prose {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-bold text-black my-4;
+}
+
+.prose h1 {
+  @apply text-3xl;
+}
+
+.prose h2 {
+  @apply text-2xl;
+}
+
+.prose h3 {
+  @apply text-xl;
+}
+
+.prose p {
+  @apply my-4;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-4 pl-5;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-blue-600 hover:underline;
 }

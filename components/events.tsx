@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function Events() {
   const events = [
@@ -7,31 +10,49 @@ export default function Events() {
       title: "Hosted the Biggest DAO Event in Uyo with Mprofy",
       date: "Nov 10-12, 2025",
       time: "3:00 PM - 5:00 PM",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      slug: "biggest-dao-event-uyo",
     },
     {
       title: "Massive Onboarding Phase 1 - Get welcomed into the Taget family.",
       date: "October 15, 2025",
       time: "3:00 PM - 5:00 PM",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      slug: "onboarding-phase-1",
     },
     {
       title: "Q2 2025 Prep - Get ready for the Learning Phase",
       date: "October 20, 2025",
       time: "2:00 PM - 3:30 PM",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      slug: "q2-2025-prep",
     },
   ]
 
   return (
     <section className="py-16">
       <div className="container-custom">
-        <h3 className="text-center text-lg mb-2">Our Events</h3>
-        <h2 className="text-4xl font-bold text-center mb-12">Grow Your Skills, Expand Your Network, and Have Fun!</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-center text-lg mb-2">Our Events</h3>
+          <h2 className="text-4xl font-bold text-center mb-12">Grow Your Skills, Expand Your Network, and Have Fun!</h2>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {events.map((event, index) => (
-            <div key={index} className="border rounded-lg overflow-hidden">
+            <motion.div
+              key={index}
+              className="border rounded-lg overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
               <div className="aspect-video relative">
                 <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
               </div>
@@ -42,24 +63,30 @@ export default function Events() {
                   <span>{event.time}</span>
                 </div>
                 <Link
-                  href="/events"
+                  href={`/events/${event.slug}`}
                   className="block text-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors"
                 >
                   Learn More
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           <Link
             href="/events"
             className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
           >
             See More
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
