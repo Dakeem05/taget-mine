@@ -14,7 +14,7 @@ export default function WhoWeAre() {
         />
       </div>
 
-      <div className="container-custom mt-[200px] sm:mt-[300px]">
+      <div className="container-custom mt-[100px] sm:mt-[300px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h3 className="text-[32px] sm:text-[48px] font-bold">Welcome to Taget</h3>

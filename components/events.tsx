@@ -39,7 +39,7 @@ export default function Events() {
           viewport={{ once: true }}
         >
           <h3 className="text-center text-[#333333] font-bold text-lg mb-2">Our Events</h3>
-          <h2 className="text-[40px] text-black font-bold text-center mb-12">Grow Your Skills, Expand Your Network, and Have Fun!</h2>
+          <h2 className="text-[22px] md:text-[40px] text-black font-bold text-center mb-12">Grow Your Skills, Expand Your Network, and Have Fun!</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
