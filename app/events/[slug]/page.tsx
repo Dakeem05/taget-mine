@@ -3,7 +3,7 @@ import Footer from "@/components/footer"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-
+import Navbar from "@/components/navbar"
 // This would typically come from a database or API
 const getEventData = (slug: string) => {
   const events = {
@@ -114,7 +114,8 @@ export default function EventPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <main className="min-h-screen">
+    <Navbar />
+      <main className="min-h-screen px-3">
         <div className="container-custom py-8">
           <div className="text-sm breadcrumbs mb-8">
             <ul className="flex space-x-2">
