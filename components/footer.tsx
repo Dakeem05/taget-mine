@@ -3,6 +3,7 @@
 import type React from "react"
 import Link from "next/link"
 import { useState } from "react"
+import Image from "next/image"
 
 export default function Footer() {
   const [email, setEmail] = useState("")
@@ -16,16 +17,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white py-12">
-      <div className="container-custom">
+      <div className="container-custom px-4 sm:px-0">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div className="space-y-4">
-            <Link href="/" className="text-2xl font-bold">
-              TAGET
-            </Link>
+          <div className="space-y-4 text-center md:text-left">
+          <Link href="/" className="text-2xl font-bold inline-block">
+            <Image src="/logo.svg" alt="Taget Logo" className="invert mx-auto md:mx-0" width={80} height={24} />
+          </Link>
             <p className="text-sm">Building the future, one target at a time.</p>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -51,7 +52,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="font-bold mb-4">Connect With Us</h3>
             <ul className="space-y-2">
               <li className="text-sm">
@@ -67,9 +68,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-bold mb-4">Join our Newsletter</h3>
-            <form onSubmit={handleSubmit} className="flex">
+          <div className="w-full md:w-auto">
+            <h3 className="font-bold mb-4 text-center md:text-left">Join our Newsletter</h3>
+            <form onSubmit={handleSubmit} className="flex max-w-[300px] mx-auto md:mx-0">
               <input
                 type="email"
                 value={email}
@@ -78,7 +79,7 @@ export default function Footer() {
                 className="bg-white text-black px-3 py-2 rounded-l-md w-full"
                 required
               />
-              <button type="submit" className="bg-gray-800 px-4 py-2 rounded-r-md hover:bg-gray-700 transition-colors">
+              <button type="submit" className="bg-black border rounded-r-[6px] px-4 py-2 hover:bg-gray-700 transition-colors">
                 Send
               </button>
             </form>

@@ -26,12 +26,13 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-16">
-      <div className="container-custom max-w-3xl">
-        <div className="border rounded-3xl p-8">
+    <section className="py-16 px-4 sm:px-0">
+      <div className="w-full flex items-center justify-center">
+        <div className="border w-full max-w-[997px] min-h-[733px] rounded-[30px] border-[#0D0D0D] p-4 sm:p-8">
+          <div className="max-w-[800px] pt-8 sm:pt-16 mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-2">Talk to Us</h2>
-            <p className="text-lg uppercase">LET'S FIND YOUR TARGET</p>
+            <h2 className="text-[32px] sm:text-[48px] font-bold mb-2">Talk to Us</h2>
+            <p className="text-[18px] sm:text-[24px] text-black uppercase">LET'S FIND YOUR TARGET</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -42,7 +43,7 @@ export default function ContactForm() {
                 placeholder="First name"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="bg-gray-200 rounded-md p-3"
+                className="bg-[#D3D4D8] h-[64px] text-black placeholder-black rounded-[8px] p-3"
                 required
               />
               <input
@@ -51,7 +52,7 @@ export default function ContactForm() {
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="bg-gray-200 rounded-md p-3"
+                className="bg-[#D3D4D8] h-[64px] text-black placeholder-black rounded-[8px] p-3"
                 required
               />
             </div>
@@ -63,7 +64,7 @@ export default function ContactForm() {
                 placeholder="E-mail address"
                 value={formData.email}
                 onChange={handleChange}
-                className="bg-gray-200 rounded-md p-3"
+                className="bg-[#D3D4D8] h-[64px] text-black placeholder-black rounded-[8px] p-3"
                 required
               />
               <input
@@ -72,7 +73,7 @@ export default function ContactForm() {
                 placeholder="Phone number"
                 value={formData.phone}
                 onChange={handleChange}
-                className="bg-gray-200 rounded-md p-3"
+                className="bg-[#D3D4D8] h-[64px] text-black placeholder-black rounded-[8px] p-3"
               />
             </div>
 
@@ -82,7 +83,7 @@ export default function ContactForm() {
               placeholder="Subject"
               value={formData.subject}
               onChange={handleChange}
-              className="bg-gray-200 rounded-md p-3 w-full"
+              className="bg-[#D3D4D8] h-[64px] text-black placeholder-black rounded-[8px] p-3 w-full"
               required
             />
 
@@ -91,17 +92,18 @@ export default function ContactForm() {
               placeholder="Tell us something"
               value={formData.message}
               onChange={handleChange}
-              className="bg-gray-200 rounded-md p-3 w-full h-32"
+              className="bg-[#D3D4D8] text-black placeholder-black rounded-[8px] p-3 w-full h-32"
               required
             />
 
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors"
+              className="w-full bg-black h-[68px] rounded-[6px] text-white py-3 hover:bg-gray-800 transition-colors"
             >
               Send to Taget
             </button>
           </form>
+        </div>
         </div>
       </div>
     </section>

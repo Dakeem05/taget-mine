@@ -32,10 +32,10 @@ export default function WhyJoin() {
   ]
 
   return (
-    <section className="py-16">
+    <section className="py-16 px-4 sm:px-0">
       <div className="container-custom">
         <motion.h2
-          className="text-[48px] text-[#0D0D0D] font-bold text-center mb-16"
+          className="text-[32px] sm:text-[48px] text-[#0D0D0D] font-bold text-center mb-8 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -44,11 +44,11 @@ export default function WhyJoin() {
           Why Join Taget ?
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.title}
-              className="bg-[#F0F0F0] max-w-[288px] min-h-[387px] rounded-[20px] px-[32p] py-[29px] text-center"
+              className="bg-[#F0F0F0] w-full sm:max-w-[288px] min-h-[387px] rounded-[20px] px-[24px] sm:px-[32px] py-[29px] text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -78,5 +78,5 @@ export default function WhyJoin() {
         </div>
       </div>
     </section>
-  )
-}
+  ) 
+}                                  

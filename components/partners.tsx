@@ -27,7 +27,7 @@ export default function Partners() {
   const doubledPartners = [...partners, ...partners]
 
   return (
-    <section className="py-12 border-b overflow-hidden">
+    <section className="py-8 sm:py-12 border-b overflow-hidden">
       <div className="relative">
         <div 
           className="flex whitespace-nowrap animate-marquee"
@@ -40,7 +40,7 @@ export default function Partners() {
           {doubledPartners.map((partner, index) => (
             <motion.div
               key={`${partner.name}-${index}`}
-              className="mx-8 inline-block"
+              className="mx-4 sm:mx-8 inline-block"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
@@ -49,7 +49,7 @@ export default function Partners() {
                 alt={partner.name}
                 width={120}
                 height={50}
-                className="h-12 w-auto object-contain"
+                className="h-8 sm:h-12 w-auto object-contain"
               />
             </motion.div>
           ))}
