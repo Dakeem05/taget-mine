@@ -7,25 +7,25 @@ export default function WhyJoin() {
   const reasons = [
     {
       title: "COMMUNITY",
-      icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      icon: "/image1.svg",
       description:
         "Immerse yourself in a community passionate about Web3, where you can connect with innovators and contribute to shaping the on-chain future.",
     },
     {
       title: "EDUCATION",
-      icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      icon: "/image2.svg",
       description:
         "Explore Web3 technologies with our expansive resources, acquiring the skills and knowledge you need to engage in the blockchain revolution.",
     },
     {
       title: "JOBS",
-      icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      icon: "/image3.svg",
       description:
         "Discover career opportunities in the growing Web3 industry, from blockchain development to creating NFTs, and shape your future.",
     },
     {
       title: "LIVE SPACES",
-      icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      icon: "/image4.svg",
       description:
         "Engage in Web3 through live sessions, workshops, and AMAs, gaining real-time insights and staying updated with the latest developments.",
     },
@@ -35,7 +35,7 @@ export default function WhyJoin() {
     <section className="py-16">
       <div className="container-custom">
         <motion.h2
-          className="text-4xl font-bold text-center mb-16"
+          className="text-[48px] text-[#0D0D0D] font-bold text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ export default function WhyJoin() {
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.title}
-              className="bg-gray-100 rounded-lg p-6 text-center"
+              className="bg-[#F0F0F0] max-w-[288px] min-h-[387px] rounded-[20px] px-[32p] py-[29px] text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -57,20 +57,22 @@ export default function WhyJoin() {
             >
               <div className="flex justify-center mb-4">
                 <motion.div
-                  className="w-24 h-24 rounded-full bg-white flex items-center justify-center"
+                  className="w-[175px] h-[175px] rounded-full flex items-center justify-center"
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
                   <Image
                     src={reason.icon || "/placeholder.svg"}
                     alt={reason.title}
-                    width={60}
-                    height={60}
-                    className="w-16 h-16 object-contain"
+                    width={175}
+                    height={175}
+                    className="w-[175px] h-[175px] object-cover"
                   />
                 </motion.div>
               </div>
-              <h3 className="text-xl font-bold mb-4">{reason.title}</h3>
-              <p className="text-sm text-gray-700">{reason.description}</p>
+              <div className="w-full flex flex-col justify-center items-center px-3">
+                <h3 className="text-[24px] w-[224px] min-h-[30px] pb-5 border-b-2 border-b-[#D3D4D8] text-[#0D0D0D] font-bold mb-4">{reason.title}</h3>
+                <p className="text-[12px] text-[#0D0D0D]">{reason.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>
