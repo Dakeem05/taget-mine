@@ -11,8 +11,10 @@ import Footer from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col overflow-x-hidden w-full">
-      <Navbar />
-      <Hero />
+      <div className="px-3">
+        <Navbar />
+        <Hero />
+      </div>
       <Partners />
       <WhoWeAre />
       <WhyJoin />
