@@ -42,7 +42,7 @@ export default function Events() {
           <h2 className="text-[22px] md:text-[40px] text-black font-bold text-center mb-12">Grow Your Skills, Expand Your Network, and Have Fun!</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pl-0.5 pr-1 mb-8">
           {events.map((event, index) => (
             <motion.div
               key={index}
