@@ -12,7 +12,7 @@ const getEventData = (slug: string) => {
       date: "Nov 10-12, 2025",
       time: "3:00 PM - 5:00 PM",
       location: "Uyo Tech Hub, Uyo, Nigeria",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      image: "/event1.png",
       description: `
         <p>Taget proudly hosted what they've dubbed the "biggest DAO event in Uyo" during Q1 2025. This event marks a significant milestone for the project, showcasing its ability to mobilize a community, foster collaboration, and spotlight decentralized autonomous organizations (DAOs) in a region that might not traditionally be seen as a hub for such cutting-edge concepts. The event likely drew a diverse crowd—enthusiasts, developers, educators, and global curious about decentralized systems—making it a landmark moment for both Taget and the broader DAO movement in Nigeria.</p>
         <p>Organizing a large-scale event requires meticulous planning, from securing a venue and speakers to marketing and logistics. Calling it the "biggest" suggests it surpassed expectations in attendance, impact, or scope compared to previous gatherings in Uyo. It's possible this event featured workshops, keynote speeches, or live demonstrations of DAO technologies, aiming to educate and inspire. Given Taget's focus on community and onboarding, this wasn't just a one-off spectacle—it was a launchpad for deeper engagement.</p>
@@ -40,7 +40,7 @@ const getEventData = (slug: string) => {
       date: "October 15, 2025",
       time: "3:00 PM - 5:00 PM",
       location: "Virtual Event",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      image: "/event2.png",
       description:
         "Join us for the first phase of our massive onboarding initiative. This virtual event will introduce you to the Taget ecosystem and help you get started on your journey into the world of decentralized autonomous organizations.",
       sections: [
@@ -66,7 +66,7 @@ const getEventData = (slug: string) => {
       date: "October 20, 2025",
       time: "2:00 PM - 3:30 PM",
       location: "Taget Learning Center, Lagos",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GljBxADpIqB11BABvKAC4bg58t5iv2.png",
+      image: "/event3.png",
       description:
         "Prepare for our Q2 learning phase with this introductory session that will set you up for success in the coming months. This event will outline our curriculum, introduce our instructors, and provide you with all the resources you need to excel in your Web3 journey.",
       sections: [
