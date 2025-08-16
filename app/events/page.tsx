@@ -3,6 +3,7 @@ import Footer from "@/components/footer"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Navbar from "@/components/navbar"
 
 export default function EventsPage() {
   const featuredEvents = [
@@ -66,6 +67,9 @@ export default function EventsPage() {
   return (
     <>
       <main className="min-h-screen">
+        <div className="px-3">
+          <Navbar />
+        </div>
         <div className="container-custom py-8">
           <div className="text-sm breadcrumbs mb-8">
             <ul className="flex space-x-2">

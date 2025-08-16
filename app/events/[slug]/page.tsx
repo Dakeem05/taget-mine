@@ -99,7 +99,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
     return (
       <>
         <main className="min-h-screen">
-          <div className="container-custom py-16 text-center">
+          <div className="container-event py-16 text-center">
             <h1 className="text-4xl font-bold mb-4">Event Not Found</h1>
             <p className="mb-8">The event you're looking for doesn't exist or has been removed.</p>
             <Link href="/events" className="btn-primary">
@@ -116,7 +116,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
     <>
     <Navbar />
       <main className="min-h-screen px-3">
-        <div className="container-custom py-8">
+        <div className="container-event py-8">
           <div className="text-sm breadcrumbs mb-8">
             <ul className="flex space-x-2">
               <li>
